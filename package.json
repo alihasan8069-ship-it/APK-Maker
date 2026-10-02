@@ -1,0 +1,26 @@
+{
+  "name": "website-apk-studio",
+  "version": "1.5.0",
+  "description": "Website APK Studio - Electron desktop studio plus browser-compatible editor and preview",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "android:add": "npx cap add android",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "build:apk": "node scripts/build-apk.js",
+    "dev": "electron .",
+    "prepare:android": "node scripts/prepare-project.js",
+    "prepare:settings": "node scripts/prepare-settings.js",
+    "prepare:release": "node scripts/prepare-release.js",
+    "build:release": "node scripts/build-release.js"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/core": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "electron": "^38.1.2"
+  }
+}
